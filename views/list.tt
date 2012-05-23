@@ -1,0 +1,8 @@
+<h1>List of records</h1>
+<div id="law" class="roundies">
+<ul>
+<% FOREACH law IN laws %>
+<li><a href="/law/<% law.id %>"><% law.title %></a> <i>(<% law.lastdate %>)</i></li>
+<% END %>
+</ul>
+</div>

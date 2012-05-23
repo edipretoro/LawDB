@@ -1,0 +1,43 @@
+  
+<!-- 
+    Credit goes to the Ruby on Rails team for this page 
+    has been heavily based on the default Rails page that is 
+    built with a scaffolded application.
+
+    Thanks a lot to them for their work.
+
+    See Ruby on Rails if you want a kickass framework in Ruby:
+    http://www.rubyonrails.org/
+-->
+
+<div id="page" class="roundies">
+<h1>Introduction</h1>
+<p>LawDB is created in order to offer a simple access to some
+recorded laws. It proposes an search box and a full-text access to the
+laws.LawDB aims to be a part of a bigger project which is still under
+development. It will be online as soon as possible.</p>
+<p>LawDB is based on a SQLite database with the following tables :</p>
+<ul>
+  <li><b>Law</b> containing general metadata about the law</li>
+  <ul>
+    <li>Title</li>
+    <li>Last publication date</li>
+    <li>Prescriber</li>
+  </ul>
+  <li><b>LawVersion</b> containing specific metadata about the recorded
+version of the law</li>
+  <ul>
+    <li>Identification number <i>(ex. CELEX for Europe Parliament)</i></li>
+    <li>Publication date</li>
+  </ul>
+  <li><b>Some content tables</b></li>
+  <ul>
+    <li>Preamble</li>
+    <li>Article</li>
+    <li>Appendix</li>
+  </ul>
+</ul>
+<p>LawDB is running thanks
+  to <a href="http://www.sqlite.org/">SQLite</a>, <a href="http://www.sqlite.org/">Dancer</a>
+  and <a href="http://www.sqlite.org/">Template Toolkit</a>.</p>
+</div>

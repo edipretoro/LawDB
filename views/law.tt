@@ -1,0 +1,16 @@
+<div id="law" class="roundies">
+<% FOREACH law IN laws %>
+<h1><% law.title %></h1>
+<p><i>Last modification : <% law.lastdate %></i>
+<% IF law.presc %>--written by <% law.presc %><% END %></p>
+<% FOREACH preamble IN law.preambles %>
+<p><i><% preamble.text %></i></p>
+<% END %>
+<% FOREACH article IN law.articles %>
+<p><b class="numord"><% article.numord %></b>     <% article.content %></p>
+<% END %>
+<% FOREACH appendix IN law.appendixes %>
+<p><i><% appendix.text %></i></p>
+<% END %>
+<% END %>
+</div>

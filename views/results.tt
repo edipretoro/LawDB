@@ -1,0 +1,27 @@
+<% IF articles.size %>
+<h1 align="center">Results found !</h1>
+<form id="highlight"><input id="sText" value="<% query %>"/><button>Highlight word</button></form>
+<script type="text/javascript">
+  document.getElementById('highlight').onsubmit = function() {
+  findAndReplace(document.getElementById('sText').value,
+  function(text){
+  return '<span class="highlight">' + text + '</span>';
+  });
+  return false;
+  };
+</script>
+<p><a href="/search">Back to research page</a></p>
+<div id="law" class="roundies">
+<% FOREACH law IN laws %>
+<h2><% law.title %></h2>
+<% FOREACH article IN articles %>
+<% IF (law.id = article.lawid) %>
+<p><b class="numord"><% article.numord %></b><% article.content %></p>
+<% END %>
+<% END %>
+<% END %>
+<% ELSE %>
+<h1>No result found...</h1>
+<p><a href="/search">Back to research page</a></p>
+<% END %>
+</div>
