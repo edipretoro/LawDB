@@ -21,6 +21,7 @@
 <% END %>
 <% END %>
 <% ELSE %>
+<% query %>
 <h1>No result found...</h1>
 <p><a href="/search">Back to research page</a></p>
 <% END %>

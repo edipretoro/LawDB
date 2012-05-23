@@ -1,16 +1,16 @@
 appname: "LawDB"
 layout: "main"
 
-#charset: "UTF-8"
+charset: "UTF-8"
 
 template: "template_toolkit"
-# engines:
-#   template_toolkit:
-#     encoding:  'utf8'
+engines:
+  template_toolkit:
+    encoding:  'utf8'
 
 plugins:
   DBIC:
     bookstore:
-      dsn:  "dbi:SQLite:dbname=LawDB.db"
+      dsn:  "dbi:SQLite:dbname=/home/manu/projets/LawDB/LawDB.db"
       options:
         sqlite_unicode: 1
